@@ -1,5 +1,5 @@
 n<-read.table("./household_power_consumption.txt", header=TRUE, sep=";", skip=(1440*46+396), nrow=2880)
-par(mfrow = c(2,2),lwd=0.75,mar = c(4,4,2,1), cex=0.6)
+par(mfrow = c(2,2),lwd=0.75,mar = c(4,4,2,1), cex=0.5)
 plot( strptime(paste(n[,1],n[,2]), "%d/%m/%Y %H:%M:%S"),n[,3], type='l', ylab="Global Active Power (kilowatts)", xlab='')
 plot( strptime(paste(n[,1],n[,2]), "%d/%m/%Y %H:%M:%S"),n[,5], type='l', ylab="Voltage", xlab='')
 plot( strptime(paste(n[,1],n[,2]), "%d/%m/%Y %H:%M:%S"),n[,7], type='l', ylab="Energy sub metering", xlab='')
